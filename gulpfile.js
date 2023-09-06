@@ -17,6 +17,7 @@ const files = {
   jsPath: 'src/js/**/*.js',
   ejsPath: 'src/views/**/*.ejs',
   htmlPath: 'dist/views/**/*.html',
+  assetsPath: 'src/assets/**/*',
 };
 
 // ejs task
@@ -30,12 +31,7 @@ function ejsTask() {
 
 // SCSS task
 function scssTask() {
-  const plugins = [
-    postcssImport(),
-    tailwindcss(),
-    autoprefixer(),
-    cssnano()
-  ];
+  const plugins = [postcssImport(), tailwindcss(), autoprefixer(), cssnano()];
 
   return gulp
     .src(files.scssPath)
@@ -63,23 +59,28 @@ function cacheBustTask() {
     .pipe(gulp.dest('dist/views'));
 }
 
+// Copy assets task
+function copyAssetsTask() {
+  return gulp.src(files.assetsPath).pipe(gulp.dest('dist/assets'));
+}
+
 // Watch task
 function watchTask() {
   gulp.watch(
     [files.scssPath, files.jsPath, files.ejsPath],
-    gulp.parallel(scssTask, jsTask, ejsTask),
+    gulp.parallel(scssTask, jsTask, ejsTask)
   );
 }
 
 // Build task
 exports.build = gulp.series(
-  gulp.parallel(scssTask, jsTask, ejsTask),
-  cacheBustTask,
+  gulp.parallel(scssTask, jsTask, ejsTask, copyAssetsTask),
+  cacheBustTask
 );
 
 // Default task
 exports.default = gulp.series(
-  gulp.parallel(scssTask, jsTask, ejsTask),
+  gulp.parallel(scssTask, jsTask, ejsTask, copyAssetsTask),
   cacheBustTask,
-  watchTask,
+  watchTask
 );
