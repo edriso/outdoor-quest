@@ -16,7 +16,7 @@ const files = {
   scssPath: 'src/scss/**/*.scss',
   jsPath: 'src/js/**/*.js',
   ejsPath: 'src/views/**/*.ejs',
-  htmlPath: 'dist/views/**/*.html',
+  htmlPath: 'dist/views/*.html',
   assetsPath: 'src/assets/**/*',
 };
 
