@@ -1,6 +1,16 @@
-// Sidebar Toggle
 const sidebar = document.getElementById('logo-sidebar');
 if (sidebar) {
+  // Dark Mode
+  if (localStorage.getItem('darkMode') === 'enabled') {
+    document.documentElement.classList.add('dark');
+  }
+  const darkModeAction = document.querySelector('#dark-mode-action');
+  darkModeAction.addEventListener('click', () => {
+    const isDarkMode = document.documentElement.classList.toggle('dark');
+    localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled');
+  });
+
+  // Sidebar Toggle on Small Screens
   const toggleButton = document.querySelector(
     '[data-drawer-toggle="logo-sidebar"]'
   );
@@ -29,6 +39,7 @@ if (sidebar) {
   toggleButton.addEventListener('click', toggleSidebar);
   backdrop.addEventListener('click', toggleSidebar);
 
+  // Toggle User's Dropdown in Nav
   const userDropdownBtn = document.querySelector(
     '[data-dropdown-toggle="dropdown-user"]'
   );
