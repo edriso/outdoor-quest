@@ -36,6 +36,8 @@ To get started with the project, follow these steps:
 
 4. Open the dashboard in your web browser by navigating to `dist` directory.
 
+**Note**: When adding a file, such as an image, to the `assets` folder located in `src/assets`, remember that you must re-run the build or start command to apply the changes.
+
 ## Usage
 
 - Add your custom content and functionality by modifying the EJS templates in `src/views` directory.
