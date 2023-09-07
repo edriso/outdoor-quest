@@ -74,13 +74,8 @@ function watchTask() {
 
 // Build task
 exports.build = gulp.series(
-  gulp.parallel(scssTask, jsTask, ejsTask, copyAssetsTask),
-  cacheBustTask
+  gulp.parallel(scssTask, jsTask, ejsTask, copyAssetsTask, cacheBustTask)
 );
 
 // Default task
-exports.default = gulp.series(
-  gulp.parallel(scssTask, jsTask, ejsTask, copyAssetsTask),
-  cacheBustTask,
-  watchTask
-);
+exports.default = gulp.series(exports.build, watchTask);
