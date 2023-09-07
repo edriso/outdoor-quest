@@ -1,6 +1,6 @@
-# Z~OReoo Dashboard
+# Z~OReoo
 
-Explore the User Interface of Z~OReoo Dashboard. It offers a modern and intuitive user interface, powered by the latest web development technologies.
+Explore the User Interface of Z~OReoo. It offers a modern and intuitive user interface, powered by the latest web development technologies.
 
 ## Features
 
@@ -34,12 +34,12 @@ To get started with the project, follow these steps:
    npm start
    ```
 
-4. Open the dashboard in your web browser by navigating to the `dist` directory.
+4. Open the dashboard in your web browser by navigating to `dist` directory.
 
 ## Usage
 
-- Add your custom content and functionality by modifying the EJS templates in the `src/views` directory.
+- Add your custom content and functionality by modifying the EJS templates in `src/views` directory.
 
-- Customize the styling by editing Tailwind CSS classes or the SCSS files in the `src/scss` directory.
+- Customize the styling by editing Tailwind CSS classes or the SCSS files in `src/scss` directory.
 
-- Extend the JavaScript functionality by adding or modifying JavaScript files in the `src/js` directory.
+- Extend the JavaScript functionality by adding or modifying JavaScript files in `src/js` directory.
