@@ -16,7 +16,7 @@ const files = {
   scssPath: 'src/scss/**/*.scss',
   jsPath: 'src/js/**/*.js',
   ejsPath: 'src/views/**/*.ejs',
-  htmlPath: 'dist/views/*.html',
+  htmlPath: 'dist/*.html',
   assetsPath: 'src/assets/**/*',
 };
 
@@ -26,7 +26,7 @@ function ejsTask() {
     .src('src/views/pages/*.ejs')
     .pipe(ejs())
     .pipe(rename({ extname: '.html' }))
-    .pipe(gulp.dest('dist/views'));
+    .pipe(gulp.dest('dist'));
 }
 
 // SCSS task
@@ -56,7 +56,7 @@ function cacheBustTask() {
   return gulp
     .src([files.htmlPath])
     .pipe(replace(/cb=\d+/g, `cb=${cbNumber}`))
-    .pipe(gulp.dest('dist/views'));
+    .pipe(gulp.dest('dist'));
 }
 
 // Copy assets task
