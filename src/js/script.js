@@ -49,7 +49,7 @@ if (sidebar) {
   });
 
   const logoutAction = document.querySelector('#logout-action');
-  logoutAction.addEventListener('click', (e) => {
+  logoutAction.addEventListener('click', () => {
     console.log('logged out');
   });
 }
