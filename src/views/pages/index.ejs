@@ -1,13 +1,16 @@
-<%- include('../partials/header.ejs', { title: 'Dynamic Title' }) %>
+<%- include('../partials/header.ejs', { title: 'Store' }) %>
+<%- include('../partials/navigation-start.ejs') %>
 
+<main class="home">
   <div>
     <h2>Welcome to the Dashboard</h2>
+  </div>
+  
+  <div class="bg-blue-500 text-white p-4">
     <p>This is the home page content.</p>
   </div>
+</main>
 
-  <div class="bg-blue-500 text-white p-4">
-    This is a Tailwind CSS styled div.
-  </div>
-
+<%- include('../partials/navigation-end.ejs') %>
 <%- include('../partials/footer.ejs') %>
 
