@@ -36,7 +36,7 @@ To get started with the project, follow these steps:
 
 4. Open the dashboard in your web browser by navigating to `dist` directory.
 
-**Note**: When adding a file, such as an image, to the `assets` folder located in `src/assets`, remember that you must re-run the build or start command to apply the changes.
+**Note**: If you make changes to the `src/assets` folder, like adding new images, please keep in mind that you'll need to execute the build or start command again for those changes to take effect.
 
 ## Usage
 
