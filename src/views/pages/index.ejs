@@ -1,8 +1,9 @@
 <%- include('../partials/header.ejs', { title: 'Store' }) %>
 <%- include('../partials/navigation-start.ejs') %>
-<%- include('../partials/page-hero.ejs', {heading: 'Store'}) %>
 
 <main class="home">
+  <%- include('../partials/page-hero.ejs', {heading: 'Store'}) %>
+
   <label for="packages" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select a package</label>
   <select id="packages" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
     <option selected>Choose a package</option>
@@ -17,4 +18,3 @@
 
 <%- include('../partials/navigation-end.ejs') %>
 <%- include('../partials/footer.ejs') %>
-
