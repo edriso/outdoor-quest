@@ -22,19 +22,31 @@ To get started with the project, follow these steps:
    git clone https://github.com/edriso/zoreoo.git
    ```
 
-2. Build the project for production:
+2. Navigate to the project directory:
+
+   ```bash
+   cd zoreoo
+   ```
+
+3. Install project dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Build the project for production:
 
    ```bash
    npm run build
    ```
 
-3. Start the development server:
+5. Start the development server:
 
    ```bash
    npm start
    ```
 
-4. Open the dashboard in your web browser by navigating to `dist` directory.
+6. Access the website in your web browser by opening the `index.html` file located in the `dist` directory.
 
 **Note**: If you make changes to the `src/assets` folder, like adding new images, please keep in mind that you'll need to execute the build or start command again for those changes to take effect.
 
