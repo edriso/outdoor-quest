@@ -1,16 +1,16 @@
 <% if (typeof heading === 'undefined') { %>
-  <% heading = ''; %>
+<% heading = ''; %>
 <% } %>
 
 <% if (typeof desc === 'undefined') { %>
-  <% desc = ''; %>
+<% desc = ''; %>
 <% } %>
 
 <div class="mb-6 lg:mb-8">
-    <% if(heading) { %>
-        <h2 class="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white"><%= heading %></h2>
-    <% } %>
-    <% if(desc) { %>
-        <p class="font-light text-gray-500 dark:text-gray-400 sm:text-xl"><%= desc %></p>
-    <% } %>
+  <% if(heading) { %>
+  <h2 class="mb-4 text-2xl font-bold text-gray-900 dark:text-white"><%= heading %></h2>
+  <% } %>
+  <% if(desc) { %>
+  <p class="font-light text-gray-500 dark:text-gray-400 sm:text-xl"><%= desc %></p>
+  <% } %>
 </div>
