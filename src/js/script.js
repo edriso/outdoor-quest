@@ -1,4 +1,4 @@
-const sidebar = document.getElementById('logo-sidebar');
+const sidebar = document.getElementById('nav-sidebar');
 if (sidebar) {
   // Dark Mode
   if (localStorage.getItem('darkMode') === 'enabled') {
@@ -10,9 +10,23 @@ if (sidebar) {
     localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled');
   });
 
+  // NavLinks Active Class
+  const endingPath = '/' + window.location.pathname.split('/').pop();
+  const navLinks = document.querySelectorAll('#nav-sidebar a');
+  const navActiveClasses = ['bg-gray-100', 'dark:bg-gray-700'];
+  for (const link of navLinks) {
+    if (endingPath === '/') {
+      navLinks[0].classList.add(...navActiveClasses);
+      break;
+    }
+    if (link.getAttribute('href').includes(endingPath)) {
+      link.classList.add(...navActiveClasses);
+    }
+  }
+
   // Sidebar Toggle on Small Screens
   const toggleButton = document.querySelector(
-    '[data-drawer-toggle="logo-sidebar"]'
+    '[data-drawer-toggle="nav-sidebar"]'
   );
   const toggleSidebar = () => {
     sidebar.classList.toggle('-translate-x-full');
@@ -48,6 +62,7 @@ if (sidebar) {
     userDropdownMenu.classList.toggle('hidden');
   });
 
+  // On Logging-out
   const logoutAction = document.querySelector('#logout-action');
   logoutAction.addEventListener('click', () => {
     console.log('logged out');
