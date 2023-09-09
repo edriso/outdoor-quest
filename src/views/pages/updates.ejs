@@ -2,7 +2,24 @@
 <%- include('../partials/navigation-start.ejs') %>
 
 <main class="updates">
-    updates page
+  <%- include('../partials/page-hero.ejs', {heading: 'List of Updates'}) %>
+
+  <div class="relative overflow-x-auto">
+    <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+      <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        <tr>
+          <th scope="col" class="px-6 py-3">
+            News &amp; Updates
+          </th>
+          <th scope="col" class="px-6 py-3 whitespace-nowrap">
+            Posted On
+          </th>
+        </tr>
+      </thead>
+      <tbody id="updates-table-body"></tbody>
+    </table>
+  </div>
+
 </main>
 
 <%- include('../partials/navigation-end.ejs') %>

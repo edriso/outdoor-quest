@@ -1,3 +1,4 @@
+const endingPath = '/' + window.location.pathname.split('/').pop();
 const sidebar = document.getElementById('nav-sidebar');
 if (sidebar) {
   // Dark Mode
@@ -11,7 +12,6 @@ if (sidebar) {
   });
 
   // NavLinks Active Class
-  const endingPath = '/' + window.location.pathname.split('/').pop();
   const navLinks = document.querySelectorAll('#nav-sidebar a');
   const navActiveClasses = ['bg-gray-100', 'dark:bg-gray-700'];
   for (const link of navLinks) {
@@ -66,5 +66,52 @@ if (sidebar) {
   const logoutAction = document.querySelector('#logout-action');
   logoutAction.addEventListener('click', () => {
     console.log('logged out');
+  });
+}
+
+if (endingPath.includes('update')) {
+  // API Request
+  const updateList = [
+    {
+      content: 'lorem ipsum',
+      date: '9 Sep 2023',
+    },
+    {
+      content: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit...',
+      date: '9 Sep 2023',
+    },
+    {
+      content: 'lorem ipsum',
+      date: '5 Sep 2023',
+    },
+  ];
+  const updatesBody = document.querySelector('#updates-table-body');
+
+  updateList.forEach((item) => {
+    const row = document.createElement('tr');
+    row.classList.add(
+      'bg-white',
+      'border-b',
+      'dark:bg-gray-800',
+      'dark:border-gray-700'
+    );
+
+    const contentCell = document.createElement('th');
+    contentCell.classList.add(
+      'px-6',
+      'py-4',
+      'text-gray-900',
+      'dark:text-white',
+      'font-medium'
+    );
+    contentCell.textContent = item.content;
+
+    const DateCell = document.createElement('td');
+    DateCell.classList.add('px-6', 'py-4', 'whitespace-nowrap');
+    DateCell.textContent = item.date;
+
+    row.appendChild(contentCell);
+    row.appendChild(DateCell);
+    updatesBody.appendChild(row);
   });
 }
