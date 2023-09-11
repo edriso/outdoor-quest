@@ -1,6 +1,6 @@
-# Z~OReoo
+# OutdoorQuest
 
-Explore the User Interface of Z~OReoo. It offers a modern and intuitive user interface, powered by the latest web development technologies.
+OutdoorQuest is a straightforward application constructed using Gulp, EJS, Sass, and TailwindCSS.
 
 ## Features
 
@@ -19,13 +19,13 @@ To get started with the project, follow these steps:
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/edriso/zoreoo.git
+   git clone https://github.com/edriso/outdoor-quest.git
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd zoreoo
+   cd outdoor-quest
    ```
 
 3. Install project dependencies:

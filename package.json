@@ -1,7 +1,7 @@
 {
-  "name": "zoreoo",
+  "name": "OutdoorQuest",
   "version": "1.0.0",
-  "description": "Z~OReoo Dashboard's frontend app",
+  "description": "OutdoorQuest is a straightforward application constructed using Gulp, EJS, Sass, and TailwindCSS.",
   "main": "dist/views/index.html",
   "scripts": {
     "start": "gulp",

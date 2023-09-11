@@ -69,9 +69,9 @@ if (sidebar) {
   });
 }
 
-if (endingPath.includes('update')) {
+if (endingPath.includes('news')) {
   // API Request
-  const updateList = [
+  const newsList = [
     {
       content: 'lorem ipsum',
       date: '9 Sep 2023',
@@ -85,9 +85,9 @@ if (endingPath.includes('update')) {
       date: '5 Sep 2023',
     },
   ];
-  const updatesBody = document.querySelector('#updates-table-body');
+  const newsBody = document.querySelector('#news-table-body');
 
-  updateList.forEach((item) => {
+  newsList.forEach((item) => {
     const row = document.createElement('tr');
     row.classList.add(
       'bg-white',
@@ -112,6 +112,6 @@ if (endingPath.includes('update')) {
 
     row.appendChild(contentCell);
     row.appendChild(DateCell);
-    updatesBody.appendChild(row);
+    newsBody.appendChild(row);
   });
 }
